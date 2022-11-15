@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    List<string> products = (List<string>)ViewBag.Products;
+
+}
+
+<h1>Index</h1>
+<h3>Products count: @products.Count</h3>
+
+<ul>
+   @* @for(var i = 0; i < products.Count; i++)
+    {
+        <li>
+            @products[i]
+        </li>
+    }*@
+
+    @foreach (var item in products)
+   {
+       <li>@item</li>
+   }
+</ul>
+
+
+
